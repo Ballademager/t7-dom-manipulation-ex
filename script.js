@@ -1,7 +1,7 @@
 //Write your own code here
 //DON'T touch any other files!
 
-// document.body.innerHTML = document.body.innerHTML.replace(/<br>/gi, "");
+// chatGPTs løsning: document.body.innerHTML = document.body.innerHTML.replace(/<br>/gi, "");
 
 function removeBreaks() {
   console.log("first assignment");
@@ -28,6 +28,9 @@ function removeBefore() {
   console.log("removing elements that comes before a sec");
   const secs = document.querySelectorAll("section");
   // do the rest
+  secs.forEach((a) => {
+    a.previousElementSibling.remove();
+  });
 }
 
 removeBefore();
