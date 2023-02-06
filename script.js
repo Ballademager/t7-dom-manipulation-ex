@@ -1,36 +1,18 @@
 //Write your own code here
 //DON'T touch any other files!
 
-// chatGPTs løsning: document.body.innerHTML = document.body.innerHTML.replace(/<br>/gi, "");
+const allBr = document.querySelectorAll("br");
 
-function removeBreaks() {
-  console.log("first assignment");
-  const allBreaks = document.querySelectorAll("br");
-  allBreaks.forEach((a) => {
-    a.remove();
-  });
-}
+allBr.forEach((a) => {
+  a.remove();
+});
 
-removeBreaks();
+const secs = document.querySelectorAll("section");
 
-function addFilled() {
-  console.log("adding a class");
-  const allSecs = document.querySelectorAll("section");
+secs.forEach((sec) => {
+  sec.classList.add("filled");
+});
 
-  allSecs.forEach((a) => {
-    a.classList.add("filled");
-  });
-}
-
-addFilled();
-
-function removeBefore() {
-  console.log("removing elements that comes before a sec");
-  const secs = document.querySelectorAll("section");
-  // do the rest
-  secs.forEach((a) => {
-    a.previousElementSibling.remove();
-  });
-}
-
-removeBefore();
+secs.forEach((sec) => {
+  sec.previousElementSibling.remove();
+});
